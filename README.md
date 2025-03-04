@@ -1,26 +1,26 @@
 # Controle de LEDs via MQTT com Flutter e ESP32
 
 ## Descrição
-Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e um ESP32. O ESP32 recebe comandos do app via Wi-Fi e aciona os LEDs conectados.<br></br>
+Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e um ESP32. O ESP32 recebe comandos do app via Wi-Fi e aciona os LEDs conectados.
 
 ## Tecnologias Utilizadas
-**Flutter →** Interface do usuário e conexão MQTT.
-**MQTT →** Protocolo de comunicação (suporte para Mosquitto, HiveMQ, EMQX).
-**ESP32 →** Microcontrolador responsável pelo acionamento dos LEDs.<br></br>
+**Flutter →** Interface do usuário e conexão MQTT.<br></br>
+**MQTT →** Protocolo de comunicação (suporte para Mosquitto, HiveMQ, EMQX).<br></br>
+**ESP32 →** Microcontrolador responsável pelo acionamento dos LEDs.
 
 ## Arquitetura do Sistema
 1️⃣ O Flutter se conecta ao broker MQTT.<br></br>
 2️⃣ O usuário liga/desliga LEDs pelo app.<br></br>
 3️⃣ O ESP32 recebe o comando via MQTT e aciona o LED.<br></br>
 4️⃣ O ESP32 publica o status do LED de volta no MQTT.<br></br>
-5️⃣ O app exibe o status em tempo real.<br></br>
+5️⃣ O app exibe o status em tempo real.
 
 ## Recursos do Aplicativo
 ✔️ Conexão MQTT com autenticação.<br></br>
 ✔️ Controle de LED via app Flutter.<br></br>
 ✔️ Status do LED em tempo real.<br></br>
 ✔️ Interface responsiva e moderna.<br></br>
-✔️ Logs da comunicação MQTT para debug.<br></br>
+✔️ Logs da comunicação MQTT para debug.
 
 ## Tópicos MQTT
 | Tópico               | Descrição                                                  |
@@ -29,7 +29,6 @@ Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e
 | esp32/led/status      | ESP32 publica estado atual do LED (ON ou OFF).             |
 
 
-<br></br>
 ### Código ESP32 (Exemplo com PubSubClient)
 ```cpp
     #include <WiFi.h>
@@ -66,7 +65,7 @@ Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e
     client.loop();
     }
 ```
-<br></br>
+
 ### Instalação
 1️⃣ Configurar o ESP32:
 
@@ -82,7 +81,7 @@ Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e
 ```bash
     flutter run
 ```
-<br></br>
+
 ### Possíveis Expansões
 🚀 Controle de múltiplos LEDs e sensores.<br></br>
 🚀 Conexão com Google Firebase para controle remoto global.<br></br>
