@@ -69,14 +69,14 @@ Este projeto permite controlar LEDs remotamente via MQTT usando um app Flutter e
 ### Instalação
 1️⃣ Configurar o ESP32:
 
-**- Instale as bibliotecas WiFi.h e PubSubClient.h no Arduino IDE.**
-**- Modifique SSID, senha e endereço do broker MQTT.**
+**- Instale as bibliotecas WiFi.h e PubSubClient.h no Arduino IDE.** <br></br>
+**- Modifique SSID, senha e endereço do broker MQTT.** <br></br>
 **- Compile e envie para o ESP32.**
 
 2️⃣ Configurar o Flutter:
 
-**- Instale flutter_mqtt_client no pubspec.yaml.**
-**- Configure os tópicos MQTT no app.**
+**- Instale flutter_mqtt_client no pubspec.yaml.** <br></br>
+**- Configure os tópicos MQTT no app.** <br></br>
 **- Rode o projeto:**
 ```bash
     flutter run
