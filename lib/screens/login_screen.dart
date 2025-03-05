@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart'; // Importe a nova tela
 
 // Função principal para a tela de login
 class LoginScreen extends StatefulWidget {
@@ -36,12 +37,13 @@ class _LoginScreenState extends State<LoginScreen> {
     return null;
   }
 
-  // Função para enviar o formulário
+  // Função para enviar o formulário e ir para a tela inicial
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      // Aqui você pode adicionar a lógica para o envio do login
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Login bem-sucedido!')),
+      // Navega para a HomeScreen após login bem-sucedido
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     }
   }
@@ -94,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _submit,
-                child: Text('Fazer Login', style: TextStyle(color: Colors.white)), // Texto branco
+                child: Text('Fazer Login', style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue, // Cor de fundo azul
                   padding: EdgeInsets.symmetric(vertical: 16),
