@@ -98,7 +98,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Aplicativo IoT")),
+      appBar: AppBar(title: Text("Aplicativo IoT", 
+      style: TextStyle(color: Colors.white, fontSize: 20)
+      ),
+      backgroundColor: Colors.blue, // Cabeçalho azul
+      iconTheme: IconThemeData(color: Colors.white), // Ícones do AppBar em branco
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
